@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/03/2013 2:31:28 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="entity.common.UserAuth" table="user_auth" catalog="qbits_erp">
+        <id name="employeeId" type="int">
+            <column name="employee_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="20" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="32" not-null="true" />
+        </property>
+        <property name="lastLogin" type="timestamp">
+            <column name="last_login" length="19" not-null="true" />
+        </property>
+        <property name="status" type="boolean">
+            <column name="status" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
