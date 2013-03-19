@@ -6,7 +6,9 @@
     <class name="entity.common.Address" table="address" catalog="qbits_erp">
         <id name="personId" type="int">
             <column name="person_id" />
-            <generator class="assigned" />
+            <generator class="foreign">
+                <param name="property">person</param>
+            </generator>
         </id>
         <property name="address" type="string">
             <column name="address" length="200" not-null="true" />
@@ -21,6 +23,6 @@
             <column name="country" length="100" not-null="true" />
         </property>
         
-        <!--<one-to-one name="person" constrained="true" class="entity.common.Person"></one-to-one>-->
+        <one-to-one name="person" constrained="true" class="entity.common.Person"></one-to-one>
     </class>
 </hibernate-mapping>
