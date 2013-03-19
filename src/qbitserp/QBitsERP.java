@@ -23,6 +23,8 @@ public class QBitsERP {
      */
     public static void main(String[] args) {
         // TODO code application logic here       
+        
+        // Testing One to One Map
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
