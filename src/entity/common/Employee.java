@@ -9,6 +9,7 @@ public class Employee extends Person {
     private int employeeId;
     private int department;
     private boolean status;
+    private UserAuth userAuth;
 
     public Employee() {
     }
@@ -35,5 +36,13 @@ public class Employee extends Person {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public UserAuth getUserAuth() {
+        return userAuth;
+    }
+
+    public void setUserAuth(UserAuth userAuth) {
+        this.userAuth = userAuth;
     }
 }

@@ -41,6 +41,7 @@
             <property name="status" type="boolean">
                 <column name="status" not-null="true" />
             </property>
+            <one-to-one name="userAuth" class="entity.common.UserAuth" cascade="save-update"></one-to-one>
         </joined-subclass> 
     
     </class>
