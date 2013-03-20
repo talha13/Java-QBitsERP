@@ -6,9 +6,7 @@
     <class name="entity.common.UserAuth" table="user_auth" catalog="qbits_erp">
         <id name="employeeId" type="int">
             <column name="employee_id" />
-            <generator class="foreign">
-                <param name="property">employee</param>
-            </generator>
+            <generator class="assigned" />
         </id>
         <property name="username" type="string">
             <column name="username" length="20" not-null="true" />
@@ -22,6 +20,5 @@
         <property name="status" type="boolean">
             <column name="status" not-null="true" />
         </property>
-        <one-to-one class="entity.common.Employee" constrained="true" name="employee"></one-to-one>
     </class>
 </hibernate-mapping>
