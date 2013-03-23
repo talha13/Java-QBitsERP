@@ -8,8 +8,9 @@
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>
-    <mapping resource="entity/common/Address.hbm.xml"/>
-    <mapping resource="entity/common/Person.hbm.xml"/>
-    <mapping resource="entity/common/UserAuth.hbm.xml"/>
+    <mapping resource="qbits/entity/common/Address.hbm.xml"/>
+    <mapping resource="qbits/entity/common/Person.hbm.xml"/>
+    <mapping resource="qbits/entity/common/UserAuth.hbm.xml"/>
+    <mapping resource="qbits/entity/common/Role.xml"/>
   </session-factory>
 </hibernate-configuration>

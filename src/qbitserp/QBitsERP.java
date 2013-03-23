@@ -4,17 +4,18 @@
  */
 package qbitserp;
 
-import entity.common.Address;
-import entity.common.Person;
 import java.util.Date;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import qbits.entity.common.Address;
+import qbits.entity.common.Employee;
+import qbits.entity.common.Person;
+import qbits.entity.common.Role;
 import util.HibernateUtil;
 
 /**
  *
- * @author Topu
- * talha13@gmail.com
+ * @author Topu talha13@gmail.com
  */
 public class QBitsERP {
 
@@ -27,19 +28,34 @@ public class QBitsERP {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
 
-        Person person = new Person("Mahbubur Rub", "Topu", 1, new Date());
-        
+        Role role1 = new Role();
+        role1.setTitle("Role 1");
+
+        Role role2 = new Role();
+        role2.setTitle("Role 2");
+
+
+        Employee employee = new Employee();
+
         Address address = new Address();
         address.setAddress("73-Engulal Road");
         address.setCity("Sylhet");
         address.setDistrict("Sylhet Dist.");
         address.setCountry("Bangladesh");
         
-        person.setAddress(address);
-        address.setPerson(person);
-
-//        session.save(person);
-        session.persist(person);
+        employee.setFirstName("Employee 01");
+        employee.setLastName("Employee last");
+        employee.setCreatedBy(1);
+        employee.setCreatedDate(new Date());
+        
+        employee.setAddress(address);
+        address.setPerson(employee);
+        
+        employee.getRoles().add(role1);
+        employee.getRoles().add(role2);
+        
+        
+        session.save(employee);
 
         transaction.commit();
         session.close();

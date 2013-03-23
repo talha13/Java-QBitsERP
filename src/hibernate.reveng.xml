@@ -5,4 +5,5 @@
   <table-filter match-name="address"/>
   <table-filter match-name="person"/>
   <table-filter match-name="user_auth"/>
+  <table-filter match-name="role"/>
 </hibernate-reverse-engineering>
