@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 19/03/2013 2:31:28 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
-  <class catalog="qbits_erp" name="qbits.entity.common.UserAuth" table="user_auth">
+  <class catalog="qbits_erp" name="qbitserp.entity.common.UserAuth" table="user_auth">
     <id name="employeeId" type="int">
       <column name="employee_id"/>
       <generator class="foreign">
@@ -21,6 +21,6 @@
     <property name="status" type="boolean">
       <column name="status" not-null="true"/>
     </property>
-    <one-to-one class="qbits.entity.common.Employee" constrained="true" name="employee"/>
+    <one-to-one class="qbitserp.entity.common.Employee" constrained="true" name="employee"/>
   </class>
 </hibernate-mapping>

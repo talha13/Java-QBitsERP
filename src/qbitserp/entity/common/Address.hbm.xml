@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 19/03/2013 2:31:28 AM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
-  <class catalog="qbits_erp" name="qbits.entity.common.Address" table="address">
+  <class catalog="qbits_erp" name="qbitserp.entity.common.Address" table="address">
     <id name="personId" type="int">
       <column name="person_id"/>
       <generator class="foreign">
@@ -21,6 +21,6 @@
     <property name="country" type="string">
       <column length="100" name="country" not-null="true"/>
     </property>
-    <one-to-one class="qbits.entity.common.Person" constrained="true" name="person"/>
+    <one-to-one class="qbitserp.entity.common.Person" constrained="true" name="person"/>
   </class>
 </hibernate-mapping>

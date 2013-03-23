@@ -1,4 +1,4 @@
-package qbits.entity.common;
+package qbitserp.entity.common;
 // Generated 19/03/2013 2:31:28 AM by Hibernate Tools 3.2.1.GA
 
 /**

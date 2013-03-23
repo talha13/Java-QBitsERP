@@ -1,4 +1,4 @@
-package qbits.util;
+package qbitserp.util;
 
 /*
  * To change this template, choose Tools | Templates

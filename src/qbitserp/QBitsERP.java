@@ -7,10 +7,10 @@ package qbitserp;
 import java.util.Date;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import qbits.entity.common.Address;
-import qbits.entity.common.Employee;
-import qbits.entity.common.Person;
-import qbits.entity.common.Role;
+import qbitserp.entity.common.Address;
+import qbitserp.entity.common.Employee;
+import qbitserp.entity.common.Person;
+import qbitserp.entity.common.Role;
 import util.HibernateUtil;
 
 /**

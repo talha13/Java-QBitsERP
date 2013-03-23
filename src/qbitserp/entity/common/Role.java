@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package qbits.entity.common;
+package qbitserp.entity.common;
 
 import java.util.HashSet;
 import java.util.Set;
