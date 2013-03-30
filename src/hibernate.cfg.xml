@@ -12,5 +12,8 @@
     <mapping resource="qbitserp/entity/common/Person.hbm.xml"/>
     <mapping resource="qbitserp/entity/common/UserAuth.hbm.xml"/>
     <mapping resource="qbitserp/entity/common/Role.xml"/>
+    <mapping resource="qbitserp/entity/smm/Shop.hbm.xml"/>
+    <mapping resource="qbitserp/entity/product/Category.hbm.xml"/>
+    <mapping resource="qbitserp/entity/product/SubCategory.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

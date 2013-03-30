@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="qbitserp.entity.smm.Shop" table="shop">
+        <id name="shopId" type="integer">
+            <column name="shop_id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="contactPersonId" type="integer">
+            <column name="contact_person_id" not-null="true"/>
+        </property>
+        <property name="accountNo" type="string">
+            <column name="shop_account_no" length="100" not-null="true"/>
+        </property>
+        <property name="area" type="double">
+            <column name="shop_area" not-null="true"/>
+        </property>
+        <property name="createdBy" type="integer">
+            <column name="created_by"  not-null="true"/>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="created_date" not-null="true"/>
+        </property>
+        <property name="description" type="text">
+            <column name="description"  not-null="true"/>
+        </property>
+        <property name="meterNo" type="string">
+            <column name="meter_no" length="100" not-null="true"/>
+        </property>
+        <property name="name" type="string">
+            <column name="shop_name" length="100" not-null="true"/>
+        </property>
+        <property name="no" type="integer">
+            <column name="shop_no"  not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

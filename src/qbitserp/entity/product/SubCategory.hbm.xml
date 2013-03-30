@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="qbitserp.entity.product.SubCategory" table="product_sub_category">
+        <id name="id" type="integer">
+            <column name="sub_category_id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="title" type="string">
+            <column name="title"/>
+        </property>
+        <property name="createdBy" type="integer">
+            <column name="created_by"/>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="created_date"/>
+        </property>
+        <property name="status" type="boolean">
+            <column name="status"/>
+        </property>
+        <many-to-one name="category" class="qbitserp.entity.product.Category" fetch="select">
+            <column name="category_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
